@@ -73,7 +73,7 @@ merge_data_by_type <- function(type) {
 }
 
 get_mean_and_std <- function(in_df) {
-  in_df[,grep("(mean\\()|(std\\())|(activity)|(subject_id)",colnames(in_df))]
+  in_df[,grep("(mean)|(std)|(activity)|(subject_id)",colnames(in_df))]
 }
 
 project_dataset_a <- function() {
@@ -89,8 +89,11 @@ project_dataset_a <- function() {
 }
 
 project_dataset_b <- function(in_df) {
-  tbl <- tbl_df(in_df)
-  gather(tbl, variable, value, -subject_id, -activity) %>%
-    group_by(subject_id, activity, variable) %>%
-    summarize(mean=mean(value))
+  tbl_df(in_df) %>%
+    group_by(subject_id, activity) %>%
+    summarise_all(mean)
 }
+
+tidy <- project_dataset_b(project_dataset_a())
+
+write.table(tidy,file='dataset_step_5.txt',row.name=FALSE)

@@ -46,13 +46,11 @@ Here's a description of the columns:
 The next step was to create the second dataset described in the project - based on the first dataset.
 The process here is as follows:
 1. Create a tibble of the first dataset using the `tbl_df` function of the `dplyr` package.in order to allow grouping.
-2. use the 'gather' function to transform the data in the table, so that all the different 'measurement' columns that come from the 'X' input files will now be in a key value column set called 'variable' and 'value'. keep 'subject_id' and 'activity' as separate columns.
-3. use the `group_by` function so that we can perform aggregations by group - as defined by the project requirements. Group by subject_id, activity, variable.
-4. run the 'mean' function on the grouped table and return the result - this is the output dataset as required.
+2. use the `group_by` function so that we can perform aggregations by group - as defined by the project requirements. Group by subject_id, activity, variable.
+3. run the 'mean' function on the grouped table and return the result - this is the output dataset as required.
 
 Here's a description of the output dataset columns:
 1. **subject_id** - int - an identifier representing the subject this record relates to.
 2. **activitiy** - character - one of the activity types. the measurement in this record relate to this activity.
-3. **variable** - character - the name of the feature / measurement for this record, as described in the `./data/UCI HAR Dataset/features_info.txt` file
-4. **mean** - the mean value of all measurements of this (feature, activity, subject) records available from the input table.
+**rest** - the rest of the columns are based on the columns defined by `./data/UCI HAR Dataset/features_info.txt`. However, there is only one entry per subject and activity. The value is the mean of all records for the same subject_id and activity. 
 

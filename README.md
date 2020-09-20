@@ -19,3 +19,4 @@ The course project for Coursera's getting and cleaning data course
   + `get_mean_and_std <- function(in_df)` - given an input dataset, returns a subset with only columns with the names 'subject_id', 'activity', or any column that includes the string 'mean(' or the string 'std('.
   + `project_dataset_a <- function()` - when run - this function uses the above functions to create the first dataset of the project (as described in points 1-4 of the task description).
   + `project_dataset_b <- function(in_df)` - expects to get as input the first dataset of the project (as returned from `project_dataset_a`) and returns the second dataset of the project, as described in point 5 of the project description.
+  + The script ends with running the `project_dataset_b` function on the output of `project_dataset_a` to create the tidy dataset, and then store the tidy dataset to file.
