@@ -6,8 +6,8 @@ The course project for Coursera's getting and cleaning data course
 * **./data/UCI HAR Dataset** - the input data set extracted from the zip file in the original task description. for further information on the files and organization of this folder, see the internal files ./data/UCI HAR Dataset/README.txt
 
 * **CodeBook.md** - a code book that contains the following:
-** An explanation on the process performed for analyzing the "UCI HAR Dataset" and reaching the output datasets
-** A description of the output from this process - the 2 datasets required by the project.
+  + An explanation on the process performed for analyzing the "UCI HAR Dataset" and reaching the output datasets
+  + A description of the output from this process - the 2 datasets required by the project.
 
 * **README.md** - this file. contains general information about the project structure - files and folders included.
 

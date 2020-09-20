@@ -372,7 +372,11 @@ summary {
 <h2>Files and folders:</h2>
 <ul>
 <li><p><strong>./data/UCI HAR Dataset</strong> - the input data set extracted from the zip file in the original task description. for further information on the files and organization of this folder, see the internal files ./data/UCI HAR Dataset/README.txt</p></li>
-<li><p><strong>CodeBook.md</strong> - a code book that contains the following: ** An explanation on the process performed for analyzing the “UCI HAR Dataset” and reaching the output datasets ** A description of the output from this process - the 2 datasets required by the project.</p></li>
+<li><p><strong>CodeBook.md</strong> - a code book that contains the following:</p>
+<ul>
+<li>An explanation on the process performed for analyzing the “UCI HAR Dataset” and reaching the output datasets</li>
+<li>A description of the output from this process - the 2 datasets required by the project.</li>
+</ul></li>
 <li><p><strong>README.md</strong> - this file. contains general information about the project structure - files and folders included.</p></li>
 <li><p><strong>run_analysis.R</strong> - The script containing all the code required to analyze the input data set and transform the data in it to the output datasets. Generally, the functions in the script are organized in a bottom up order. I.e. the most basic utility functions are top-most in the file, and as we scroll down each function can use the functions that were defined above it, but doesn’t know the functions below it. Here’s a description of the function - top to bottom:</p>
 <ul>
